@@ -1,0 +1,13 @@
+const express = require('express');
+const departmentController = require('../controllers/departmentController');
+const { authenticateToken } = require('../middlewares/auth');
+
+const router = express.Router();
+
+router.use(authenticateToken);
+
+router.get('/', departmentController.getDepartments);
+router.post('/', departmentController.createDepartment);
+router.delete('/:id', departmentController.deleteDepartment);
+
+module.exports = router;

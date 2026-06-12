@@ -1,0 +1,450 @@
+{
+  "info": {
+    "name": "HRMS Enterprise API Collection",
+    "description": "Postman collection for testing the HRMS API endpoints.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Authentication",
+      "item": [
+        {
+          "name": "Login",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"pranay@isoftzone.com\",\n  \"password\": \"123456\",\n  \"role\": \"admin\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/v1/auth/login",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "auth", "login"]
+            }
+          }
+        },
+        {
+          "name": "Signup",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Jane Smith\",\n  \"email\": \"jane.smith@example.com\",\n  \"password\": \"password123\",\n  \"role\": \"employee\",\n  \"designation\": \"Node.js Developer\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/v1/auth/signup",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "auth", "signup"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Employees",
+      "item": [
+        {
+          "name": "Get Employees (with pagination/search/department filter)",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwt_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/v1/employees?page=1&limit=10&search=Amit&department=Software Development",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "employees"],
+              "query": [
+                { "key": "page", "value": "1" },
+                { "key": "limit", "value": "10" },
+                { "key": "search", "value": "Amit" },
+                { "key": "department", "value": "Software Development" }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Employee by ID",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwt_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/v1/employees/4",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "employees", "4"]
+            }
+          }
+        },
+        {
+          "name": "Update Employee Profile",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwt_token}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Amit Patel Updated\",\n  \"email\": \"amit@isoftzone.com\",\n  \"role\": \"employee\",\n  \"phone\": \"9876543213\",\n  \"department_id\": 1,\n  \"designation\": \"Lead React Developer\",\n  \"salary\": 55000,\n  \"address\": \"Indore, MP, India\",\n  \"skills\": [1, 4, 5]\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/v1/employees/4",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "employees", "4"]
+            }
+          }
+        },
+        {
+          "name": "Delete Employee",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwt_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/v1/employees/10",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "employees", "10"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Leaves",
+      "item": [
+        {
+          "name": "Get Leaves (with employee/status/date filter)",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwt_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/v1/leaves?employee=Amit&status=Approved&from_date=2026-06-01&to_date=2026-06-30",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "leaves"],
+              "query": [
+                { "key": "employee", "value": "Amit" },
+                { "key": "status", "value": "Approved" },
+                { "key": "from_date", "value": "2026-06-01" },
+                { "key": "to_date", "value": "2026-06-30" }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Leave Types",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwt_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/v1/leaves/types",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "leaves", "types"]
+            }
+          }
+        },
+        {
+          "name": "Get Leave Balances",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwt_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/v1/leaves/balances",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "leaves", "balances"]
+            }
+          }
+        },
+        {
+          "name": "Apply for Leave",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwt_token}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"leave_type_id\": 1,\n  \"from_date\": \"2026-06-15\",\n  \"to_date\": \"2026-06-18\",\n  \"reason\": \"Family travel plans\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/v1/leaves",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "leaves"]
+            }
+          }
+        },
+        {
+          "name": "Update Leave Status (Approve/Reject)",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwt_token}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"status\": \"Approved\",\n  \"remarks\": \"Approved by manager\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/v1/leaves/2/status",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "leaves", "2", "status"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Assets",
+      "item": [
+        {
+          "name": "Get Assets (with filters)",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwt_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/v1/assets?category=Laptop&status=Available",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "assets"],
+              "query": [
+                { "key": "category", "value": "Laptop" },
+                { "key": "status", "value": "Available" }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Register Asset",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwt_token}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"asset_code\": \"LAP-003\",\n  \"asset_name\": \"ThinkPad T14\",\n  \"asset_type\": \"Laptop\",\n  \"purchase_date\": \"2026-05-10\",\n  \"purchase_cost\": 95000\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/v1/assets",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "assets"]
+            }
+          }
+        },
+        {
+          "name": "Allocate Asset",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwt_token}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"assetId\": 2,\n  \"employeeId\": 4\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/v1/assets/allocate",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "assets", "allocate"]
+            }
+          }
+        },
+        {
+          "name": "Return Asset",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwt_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/v1/assets/1/return",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "assets", "1", "return"]
+            }
+          }
+        },
+        {
+          "name": "Get Asset History",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwt_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/v1/assets/1/history",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "assets", "1", "history"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Reports",
+      "item": [
+        {
+          "name": "Get Employee Report",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwt_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/v1/reports/employees",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "reports", "employees"]
+            }
+          }
+        },
+        {
+          "name": "Get Leave Report",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwt_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/v1/reports/leaves",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "reports", "leaves"]
+            }
+          }
+        },
+        {
+          "name": "Get Asset Report",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{jwt_token}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/v1/reports/assets",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "reports", "assets"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "System Health",
+      "item": [
+        {
+          "name": "Get API Health",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/health",
+              "host": ["{{base_url}}"],
+              "path": ["health"]
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:5001",
+      "type": "string"
+    },
+    {
+      "key": "jwt_token",
+      "value": "your_token_value",
+      "type": "string"
+    }
+  ]
+}

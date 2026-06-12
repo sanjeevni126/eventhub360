@@ -1,0 +1,56 @@
+name: HRMS Backend CI
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    services:
+      postgres:
+        image: postgres:15-alpine
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: gauri.1234
+          POSTGRES_DB: employee_db
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+    defaults:
+      run:
+        working-directory: backend
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Use Node.js 18
+      uses: actions/setup-node@v3
+      with:
+        node-version: 18
+        cache: 'npm'
+        cache-dependency-path: backend/package-lock.json
+
+    - name: Install dependencies
+      run: npm ci
+
+    - name: Run Tests & Generate Coverage
+      run: npm test -- --coverage
+      env:
+        PORT: 5001
+        DATABASE_URL: postgresql://postgres:gauri.1234@localhost:5432/employee_db
+        JWT_SECRET: super_secret_jwt_key_for_students
+        EMAIL_USER: test@example.com
+        EMAIL_PASSWORD: testpassword
+        NODE_ENV: test
+
+    - name: Build Application Syntax Check
+      run: node -c src/app.js
