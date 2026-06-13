@@ -34,10 +34,10 @@ class AuthService {
       throw new BadRequestError('Invalid credentials');
     }
 
-    if (user.role.toLowerCase() !== role.toLowerCase()) {
-      logger.warn(`Authentication failure: Role mismatch for ${email}. Expected ${role}, got ${user.role}`);
-      throw new UnauthorizedError(`Access denied. You are not registered as a ${role}`);
-    }
+    if (role && user.role.toLowerCase() !== role.toLowerCase()) {
+  logger.warn(`Authentication failure: Role mismatch for ${email}. Expected ${role}, got ${user.role}`);
+  throw new UnauthorizedError(`Access denied. You are not registered as a ${role}`);
+}
 
     // Support both plaintext and bcrypt hashes for migration safety
     let isMatch = false;
