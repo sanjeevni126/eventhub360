@@ -10,6 +10,8 @@ const pool = process.env.DATABASE_URL
       port: process.env.DB_PORT || 5432,
     });
 
+console.log("DATABASE_URL is:", process.env.DATABASE_URL ? "SET" : "NOT SET");
+
 module.exports = {
   pool,
   query: (text, params) => pool.query(text, params),

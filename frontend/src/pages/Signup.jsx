@@ -26,7 +26,7 @@ function Signup() {
     setError('');
 
     try {
-      const response = await fetch('https://employee-management-api-lf6s.onrender.com/api/v1/auth/signup', {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/v1/auth/signup`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ name, email, password, role: role.toLowerCase(), designation })
@@ -37,7 +37,7 @@ function Signup() {
       if (response.ok) {
         localStorage.setItem('token', data.token);
         localStorage.setItem('user', JSON.stringify(data.user));
-        window.location.href = '/dashboard';
+        navigate('/dashboard', { replace: true });
       } else {
         setError(data.error || 'Signup failed');
       }

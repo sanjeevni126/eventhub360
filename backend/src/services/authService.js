@@ -22,7 +22,7 @@ class AuthService {
     const user = await authRepository.createUser(name, email, hashedPassword, assignedRole);
     await authRepository.createProfile(user.id, designation);
 
-    const token = jwt.sign({ id: user.id, email: user.email, role: user.role }, JWT_SECRET, { expiresIn: '8h' });
+    const token = jwt.sign({ id: user.id, name: user.name, email: user.email, role: user.role }, JWT_SECRET, { expiresIn: '8h' });
 
     return { token, user: { ...user, designation } };
   }
@@ -52,7 +52,7 @@ class AuthService {
       throw new BadRequestError('Invalid credentials');
     }
 
-    const token = jwt.sign({ id: user.id, email: user.email, role: user.role }, JWT_SECRET, { expiresIn: '8h' });
+    const token = jwt.sign({ id: user.id, name: user.name, email: user.email, role: user.role }, JWT_SECRET, { expiresIn: '8h' });
 
     return {
       token,

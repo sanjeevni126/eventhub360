@@ -10,7 +10,7 @@ function Notifications() {
 
   const fetchNotifications = async () => {
     try {
-      const response = await fetch('https://employee-management-api-lf6s.onrender.com/api/notifications', {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/notifications`, {
         headers: { 'Authorization': `Bearer ${token}` }
       });
       if (response.ok) {

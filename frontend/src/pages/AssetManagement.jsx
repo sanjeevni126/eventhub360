@@ -18,7 +18,7 @@ function AssetManagement() {
 
   const fetchAssets = async () => {
     try {
-      const response = await fetch('https://employee-management-api-lf6s.onrender.com/api/assets', { headers: { 'Authorization': `Bearer ${token}` } });
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/assets`, { headers: { 'Authorization': `Bearer ${token}` } });
       if (response.ok) {
         const data = await response.json();
         setAssets(data.data || data);
@@ -28,7 +28,7 @@ function AssetManagement() {
 
   const fetchEmployees = async () => {
     try {
-      const response = await fetch('https://employee-management-api-lf6s.onrender.com/api/employees', { headers: { 'Authorization': `Bearer ${token}` } });
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/employees`, { headers: { 'Authorization': `Bearer ${token}` } });
       if (response.ok) {
         setEmployees(await response.json());
       }
@@ -44,7 +44,7 @@ function AssetManagement() {
   const handleAllocate = async () => {
     if (!selectedEmployee) return alert('Select an employee');
     try {
-      const response = await fetch(`https://employee-management-api-lf6s.onrender.com/api/assets/allocate`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/assets/allocate`, {
         method: 'POST',
         headers: { 
           'Authorization': `Bearer ${token}`,
@@ -67,7 +67,7 @@ function AssetManagement() {
   const handleRevoke = async (asset) => {
     if(!window.confirm('Revoke this asset?')) return;
     try {
-      const response = await fetch(`https://employee-management-api-lf6s.onrender.com/api/assets/${asset.id}/return`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/assets/${asset.id}/return`, {
         method: 'POST',
         headers: { 'Authorization': `Bearer ${token}` }
       });

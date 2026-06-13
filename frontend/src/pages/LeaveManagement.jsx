@@ -28,7 +28,7 @@ function LeaveManagement() {
 
   const fetchLeaves = async () => {
     try {
-      const response = await fetch('https://employee-management-api-lf6s.onrender.com/api/leaves', {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/leaves`, {
         headers: { 'Authorization': `Bearer ${token}` }
       });
       if (response.ok) {
@@ -40,7 +40,7 @@ function LeaveManagement() {
 
   const fetchLeaveTypes = async () => {
     try {
-      const response = await fetch('https://employee-management-api-lf6s.onrender.com/api/leaves/types', {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/leaves/types`, {
         headers: { 'Authorization': `Bearer ${token}` }
       });
       if (response.ok) {
@@ -53,7 +53,7 @@ function LeaveManagement() {
 
   const fetchBalances = async () => {
     try {
-      const response = await fetch('https://employee-management-api-lf6s.onrender.com/api/leaves/balances', {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/leaves/balances`, {
         headers: { 'Authorization': `Bearer ${token}` }
       });
       if (response.ok) {
@@ -67,7 +67,7 @@ function LeaveManagement() {
     if (!leaveTypeId || !fromDate || !toDate) return alert('Please fill dates and leave type');
 
     try {
-      const response = await fetch('https://employee-management-api-lf6s.onrender.com/api/leaves', {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/leaves`, {
         method: 'POST',
         headers: { 
           'Authorization': `Bearer ${token}`,
@@ -88,7 +88,7 @@ function LeaveManagement() {
 
   const handleUpdateStatus = async (id, status) => {
     try {
-      const response = await fetch(`https://employee-management-api-lf6s.onrender.com/api/leaves/${id}/status`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/leaves/${id}/status`, {
         method: 'PUT',
         headers: { 
           'Authorization': `Bearer ${token}`,

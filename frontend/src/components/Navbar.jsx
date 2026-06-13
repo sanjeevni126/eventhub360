@@ -7,8 +7,8 @@ function Navbar() {
   const handleLogout = () => {
     localStorage.removeItem('token');
     localStorage.removeItem('user');
-    // Simple window reload to clear react state easily for beginner code
-    window.location.href = '/login';
+    // Simple navigate to clear react state easily for beginner code
+    navigate('/login', { replace: true });
   };
 
   return (

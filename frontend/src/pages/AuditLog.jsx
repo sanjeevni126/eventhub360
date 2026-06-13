@@ -10,7 +10,7 @@ function AuditLog() {
 
   const fetchLogs = async () => {
     try {
-      const response = await fetch('https://employee-management-api-lf6s.onrender.com/api/audit', {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/audit`, {
         headers: { 'Authorization': `Bearer ${token}` }
       });
       if (response.ok) {

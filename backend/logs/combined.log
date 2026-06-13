@@ -2889,3 +2889,123 @@
 {"level":"info","message":"Cron Jobs initialized successfully.","service":"erp-backend","timestamp":"2026-06-13 14:32:32"}
 {"level":"info","message":"ERP Backend server is running on http://localhost:5001","service":"erp-backend","timestamp":"2026-06-13 17:43:50"}
 {"level":"info","message":"Cron Jobs initialized successfully.","service":"erp-backend","timestamp":"2026-06-13 17:43:50"}
+{"level":"info","message":"ERP Backend server is running on http://localhost:5001","service":"erp-backend","timestamp":"2026-06-13 21:37:25"}
+{"level":"info","message":"Cron Jobs initialized successfully.","service":"erp-backend","timestamp":"2026-06-13 21:37:25"}
+{"level":"info","message":"POST /api/auth/login","service":"erp-backend","timestamp":"2026-06-13 21:37:27"}
+{"level":"info","message":"GET /api/dashboard/stats","service":"erp-backend","timestamp":"2026-06-13 21:37:30"}
+{"level":"info","message":"GET /api/leaves","service":"erp-backend","timestamp":"2026-06-13 21:37:30"}
+{"level":"info","message":"GET /api/employees","service":"erp-backend","timestamp":"2026-06-13 21:37:30"}
+{"level":"error","message":"500 - column ep.working_mode does not exist - /api/employees - GET - ::1","service":"erp-backend","timestamp":"2026-06-13 21:37:33"}
+{"level":"error","message":"error: column ep.working_mode does not exist\n    at C:\\Users\\91883\\OneDrive\\Desktop\\coding\\employee_system\\backend\\node_modules\\pg-pool\\index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async EmployeeRepository.findAll (C:\\Users\\91883\\OneDrive\\Desktop\\coding\\employee_system\\backend\\src\\repositories\\employeeRepository.js:35:20)\n    at async EmployeeService.getAllEmployees (C:\\Users\\91883\\OneDrive\\Desktop\\coding\\employee_system\\backend\\src\\services\\employeeService.js:8:18)\n    at async getEmployees (C:\\Users\\91883\\OneDrive\\Desktop\\coding\\employee_system\\backend\\src\\controllers\\employeeController.js:8:31)","service":"erp-backend","timestamp":"2026-06-13 21:37:33"}
+{"level":"info","message":"GET /api/employees","service":"erp-backend","timestamp":"2026-06-13 21:37:33"}
+{"level":"info","message":"GET /api/leaves","service":"erp-backend","timestamp":"2026-06-13 21:37:33"}
+{"level":"error","message":"500 - column ep.working_mode does not exist - /api/dashboard/stats - GET - ::1","service":"erp-backend","timestamp":"2026-06-13 21:37:33"}
+{"level":"error","message":"error: column ep.working_mode does not exist\n    at C:\\Users\\91883\\OneDrive\\Desktop\\coding\\employee_system\\backend\\node_modules\\pg-pool\\index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async DashboardService.getStats (C:\\Users\\91883\\OneDrive\\Desktop\\coding\\employee_system\\backend\\src\\services\\dashboardService.js:26:24)\n    at async getStats (C:\\Users\\91883\\OneDrive\\Desktop\\coding\\employee_system\\backend\\src\\controllers\\dashboardController.js:6:21)","service":"erp-backend","timestamp":"2026-06-13 21:37:33"}
+{"level":"info","message":"GET /api/dashboard/stats","service":"erp-backend","timestamp":"2026-06-13 21:37:33"}
+{"level":"error","message":"500 - column ep.working_mode does not exist - /api/employees - GET - ::1","service":"erp-backend","timestamp":"2026-06-13 21:37:33"}
+{"level":"error","message":"error: column ep.working_mode does not exist\n    at C:\\Users\\91883\\OneDrive\\Desktop\\coding\\employee_system\\backend\\node_modules\\pg-pool\\index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async EmployeeRepository.findAll (C:\\Users\\91883\\OneDrive\\Desktop\\coding\\employee_system\\backend\\src\\repositories\\employeeRepository.js:35:20)\n    at async EmployeeService.getAllEmployees (C:\\Users\\91883\\OneDrive\\Desktop\\coding\\employee_system\\backend\\src\\services\\employeeService.js:8:18)\n    at async getEmployees (C:\\Users\\91883\\OneDrive\\Desktop\\coding\\employee_system\\backend\\src\\controllers\\employeeController.js:8:31)","service":"erp-backend","timestamp":"2026-06-13 21:37:33"}
+{"level":"info","message":"GET /api/dashboard/stats","service":"erp-backend","timestamp":"2026-06-13 21:37:38"}
+{"level":"info","message":"GET /api/employees","service":"erp-backend","timestamp":"2026-06-13 21:37:38"}
+{"level":"info","message":"GET /api/leaves","service":"erp-backend","timestamp":"2026-06-13 21:37:38"}
+{"level":"error","message":"500 - column ep.working_mode does not exist - /api/dashboard/stats - GET - ::1","service":"erp-backend","timestamp":"2026-06-13 21:37:39"}
+{"level":"error","message":"error: column ep.working_mode does not exist\n    at C:\\Users\\91883\\OneDrive\\Desktop\\coding\\employee_system\\backend\\node_modules\\pg-pool\\index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async DashboardService.getStats (C:\\Users\\91883\\OneDrive\\Desktop\\coding\\employee_system\\backend\\src\\services\\dashboardService.js:26:24)\n    at async getStats (C:\\Users\\91883\\OneDrive\\Desktop\\coding\\employee_system\\backend\\src\\controllers\\dashboardController.js:6:21)","service":"erp-backend","timestamp":"2026-06-13 21:37:39"}
+{"level":"error","message":"500 - column ep.working_mode does not exist - /api/dashboard/stats - GET - ::1","service":"erp-backend","timestamp":"2026-06-13 21:37:41"}
+{"level":"error","message":"error: column ep.working_mode does not exist\n    at C:\\Users\\91883\\OneDrive\\Desktop\\coding\\employee_system\\backend\\node_modules\\pg-pool\\index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async DashboardService.getStats (C:\\Users\\91883\\OneDrive\\Desktop\\coding\\employee_system\\backend\\src\\services\\dashboardService.js:26:24)\n    at async getStats (C:\\Users\\91883\\OneDrive\\Desktop\\coding\\employee_system\\backend\\src\\controllers\\dashboardController.js:6:21)","service":"erp-backend","timestamp":"2026-06-13 21:37:41"}
+{"level":"info","message":"GET /api/dashboard/stats","service":"erp-backend","timestamp":"2026-06-13 21:37:41"}
+{"level":"error","message":"500 - column ep.working_mode does not exist - /api/employees - GET - ::1","service":"erp-backend","timestamp":"2026-06-13 21:37:41"}
+{"level":"error","message":"error: column ep.working_mode does not exist\n    at C:\\Users\\91883\\OneDrive\\Desktop\\coding\\employee_system\\backend\\node_modules\\pg-pool\\index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async EmployeeRepository.findAll (C:\\Users\\91883\\OneDrive\\Desktop\\coding\\employee_system\\backend\\src\\repositories\\employeeRepository.js:35:20)\n    at async EmployeeService.getAllEmployees (C:\\Users\\91883\\OneDrive\\Desktop\\coding\\employee_system\\backend\\src\\services\\employeeService.js:8:18)\n    at async getEmployees (C:\\Users\\91883\\OneDrive\\Desktop\\coding\\employee_system\\backend\\src\\controllers\\employeeController.js:8:31)","service":"erp-backend","timestamp":"2026-06-13 21:37:41"}
+{"level":"info","message":"GET /api/employees","service":"erp-backend","timestamp":"2026-06-13 21:37:41"}
+{"level":"info","message":"GET /api/leaves","service":"erp-backend","timestamp":"2026-06-13 21:37:41"}
+{"level":"error","message":"500 - column ep.working_mode does not exist - /api/employees - GET - ::1","service":"erp-backend","timestamp":"2026-06-13 21:37:41"}
+{"level":"error","message":"error: column ep.working_mode does not exist\n    at C:\\Users\\91883\\OneDrive\\Desktop\\coding\\employee_system\\backend\\node_modules\\pg-pool\\index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async EmployeeRepository.findAll (C:\\Users\\91883\\OneDrive\\Desktop\\coding\\employee_system\\backend\\src\\repositories\\employeeRepository.js:35:20)\n    at async EmployeeService.getAllEmployees (C:\\Users\\91883\\OneDrive\\Desktop\\coding\\employee_system\\backend\\src\\services\\employeeService.js:8:18)\n    at async getEmployees (C:\\Users\\91883\\OneDrive\\Desktop\\coding\\employee_system\\backend\\src\\controllers\\employeeController.js:8:31)","service":"erp-backend","timestamp":"2026-06-13 21:37:41"}
+{"level":"error","message":"500 - column ep.working_mode does not exist - /api/dashboard/stats - GET - ::1","service":"erp-backend","timestamp":"2026-06-13 21:37:45"}
+{"level":"error","message":"error: column ep.working_mode does not exist\n    at C:\\Users\\91883\\OneDrive\\Desktop\\coding\\employee_system\\backend\\node_modules\\pg-pool\\index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async DashboardService.getStats (C:\\Users\\91883\\OneDrive\\Desktop\\coding\\employee_system\\backend\\src\\services\\dashboardService.js:26:24)\n    at async getStats (C:\\Users\\91883\\OneDrive\\Desktop\\coding\\employee_system\\backend\\src\\controllers\\dashboardController.js:6:21)","service":"erp-backend","timestamp":"2026-06-13 21:37:45"}
+{"level":"info","message":"GET /api/employees","service":"erp-backend","timestamp":"2026-06-13 21:37:49"}
+{"level":"info","message":"GET /api/departments","service":"erp-backend","timestamp":"2026-06-13 21:37:49"}
+{"level":"info","message":"GET /api/skills","service":"erp-backend","timestamp":"2026-06-13 21:37:49"}
+{"level":"error","message":"500 - column ep.working_mode does not exist - /api/employees - GET - ::1","service":"erp-backend","timestamp":"2026-06-13 21:37:50"}
+{"level":"error","message":"error: column ep.working_mode does not exist\n    at C:\\Users\\91883\\OneDrive\\Desktop\\coding\\employee_system\\backend\\node_modules\\pg-pool\\index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async EmployeeRepository.findAll (C:\\Users\\91883\\OneDrive\\Desktop\\coding\\employee_system\\backend\\src\\repositories\\employeeRepository.js:35:20)\n    at async EmployeeService.getAllEmployees (C:\\Users\\91883\\OneDrive\\Desktop\\coding\\employee_system\\backend\\src\\services\\employeeService.js:8:18)\n    at async getEmployees (C:\\Users\\91883\\OneDrive\\Desktop\\coding\\employee_system\\backend\\src\\controllers\\employeeController.js:8:31)","service":"erp-backend","timestamp":"2026-06-13 21:37:50"}
+{"level":"info","message":"GET /api/employees","service":"erp-backend","timestamp":"2026-06-13 21:37:50"}
+{"level":"info","message":"GET /api/skills","service":"erp-backend","timestamp":"2026-06-13 21:37:51"}
+{"level":"info","message":"GET /api/departments","service":"erp-backend","timestamp":"2026-06-13 21:37:51"}
+{"level":"error","message":"500 - column ep.working_mode does not exist - /api/employees - GET - ::1","service":"erp-backend","timestamp":"2026-06-13 21:37:52"}
+{"level":"error","message":"error: column ep.working_mode does not exist\n    at C:\\Users\\91883\\OneDrive\\Desktop\\coding\\employee_system\\backend\\node_modules\\pg-pool\\index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async EmployeeRepository.findAll (C:\\Users\\91883\\OneDrive\\Desktop\\coding\\employee_system\\backend\\src\\repositories\\employeeRepository.js:35:20)\n    at async EmployeeService.getAllEmployees (C:\\Users\\91883\\OneDrive\\Desktop\\coding\\employee_system\\backend\\src\\services\\employeeService.js:8:18)\n    at async getEmployees (C:\\Users\\91883\\OneDrive\\Desktop\\coding\\employee_system\\backend\\src\\controllers\\employeeController.js:8:31)","service":"erp-backend","timestamp":"2026-06-13 21:37:52"}
+{"level":"info","message":"GET /api/auth/login","service":"erp-backend","timestamp":"2026-06-13 21:39:02"}
+{"level":"info","message":"POST /api/auth/login","service":"erp-backend","timestamp":"2026-06-13 21:39:58"}
+{"level":"info","message":"GET /api/dashboard/stats","service":"erp-backend","timestamp":"2026-06-13 21:40:00"}
+{"level":"error","message":"500 - column ep.working_mode does not exist - /api/dashboard/stats - GET - ::1","service":"erp-backend","timestamp":"2026-06-13 21:40:02"}
+{"level":"error","message":"error: column ep.working_mode does not exist\n    at C:\\Users\\91883\\OneDrive\\Desktop\\coding\\employee_system\\backend\\node_modules\\pg-pool\\index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async DashboardService.getStats (C:\\Users\\91883\\OneDrive\\Desktop\\coding\\employee_system\\backend\\src\\services\\dashboardService.js:26:24)\n    at async getStats (C:\\Users\\91883\\OneDrive\\Desktop\\coding\\employee_system\\backend\\src\\controllers\\dashboardController.js:6:21)","service":"erp-backend","timestamp":"2026-06-13 21:40:02"}
+{"level":"info","message":"GET /api/employees","service":"erp-backend","timestamp":"2026-06-13 21:40:02"}
+{"level":"error","message":"500 - column ep.working_mode does not exist - /api/employees - GET - ::1","service":"erp-backend","timestamp":"2026-06-13 21:40:04"}
+{"level":"error","message":"error: column ep.working_mode does not exist\n    at C:\\Users\\91883\\OneDrive\\Desktop\\coding\\employee_system\\backend\\node_modules\\pg-pool\\index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async EmployeeRepository.findAll (C:\\Users\\91883\\OneDrive\\Desktop\\coding\\employee_system\\backend\\src\\repositories\\employeeRepository.js:35:20)\n    at async EmployeeService.getAllEmployees (C:\\Users\\91883\\OneDrive\\Desktop\\coding\\employee_system\\backend\\src\\services\\employeeService.js:8:18)\n    at async getEmployees (C:\\Users\\91883\\OneDrive\\Desktop\\coding\\employee_system\\backend\\src\\controllers\\employeeController.js:8:31)","service":"erp-backend","timestamp":"2026-06-13 21:40:04"}
+{"level":"info","message":"ERP Backend server is running on http://localhost:5001","service":"erp-backend","timestamp":"2026-06-13 21:47:07"}
+{"level":"info","message":"Cron Jobs initialized successfully.","service":"erp-backend","timestamp":"2026-06-13 21:47:07"}
+{"level":"info","message":"ERP Backend server is running on http://localhost:5001","service":"erp-backend","timestamp":"2026-06-13 21:49:18"}
+{"level":"info","message":"Cron Jobs initialized successfully.","service":"erp-backend","timestamp":"2026-06-13 21:49:18"}
+{"level":"info","message":"ERP Backend server is running on http://localhost:5001","service":"erp-backend","timestamp":"2026-06-13 21:49:36"}
+{"level":"info","message":"Cron Jobs initialized successfully.","service":"erp-backend","timestamp":"2026-06-13 21:49:36"}
+{"level":"info","message":"ERP Backend server is running on http://localhost:5001","service":"erp-backend","timestamp":"2026-06-13 21:49:51"}
+{"level":"info","message":"Cron Jobs initialized successfully.","service":"erp-backend","timestamp":"2026-06-13 21:49:51"}
+{"level":"info","message":"POST /api/v1/auth/login","service":"erp-backend","timestamp":"2026-06-13 21:49:55"}
+{"level":"info","message":"GET /api/dashboard/stats","service":"erp-backend","timestamp":"2026-06-13 21:49:57"}
+{"level":"error","message":"500 - column ep.working_mode does not exist - /api/dashboard/stats - GET - ::1","service":"erp-backend","timestamp":"2026-06-13 21:49:59"}
+{"level":"error","message":"error: column ep.working_mode does not exist\n    at C:\\Users\\91883\\OneDrive\\Desktop\\coding\\employee_system\\backend\\node_modules\\pg-pool\\index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async DashboardService.getStats (C:\\Users\\91883\\OneDrive\\Desktop\\coding\\employee_system\\backend\\src\\services\\dashboardService.js:26:24)\n    at async getStats (C:\\Users\\91883\\OneDrive\\Desktop\\coding\\employee_system\\backend\\src\\controllers\\dashboardController.js:6:21)","service":"erp-backend","timestamp":"2026-06-13 21:49:59"}
+{"level":"info","message":"ERP Backend server is running on http://localhost:5001","service":"erp-backend","timestamp":"2026-06-13 21:50:10"}
+{"level":"info","message":"Cron Jobs initialized successfully.","service":"erp-backend","timestamp":"2026-06-13 21:50:10"}
+{"level":"info","message":"POST /api/v1/auth/login","service":"erp-backend","timestamp":"2026-06-13 21:50:28"}
+{"level":"info","message":"GET /api/dashboard/stats","service":"erp-backend","timestamp":"2026-06-13 21:50:30"}
+{"level":"error","message":"500 - column ep.working_mode does not exist - /api/dashboard/stats - GET - ::1","service":"erp-backend","timestamp":"2026-06-13 21:50:33"}
+{"level":"error","message":"error: column ep.working_mode does not exist\n    at C:\\Users\\91883\\OneDrive\\Desktop\\coding\\employee_system\\backend\\node_modules\\pg-pool\\index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async DashboardService.getStats (C:\\Users\\91883\\OneDrive\\Desktop\\coding\\employee_system\\backend\\src\\services\\dashboardService.js:26:24)\n    at async getStats (C:\\Users\\91883\\OneDrive\\Desktop\\coding\\employee_system\\backend\\src\\controllers\\dashboardController.js:6:21)","service":"erp-backend","timestamp":"2026-06-13 21:50:33"}
+{"level":"info","message":"ERP Backend server is running on http://localhost:5001","service":"erp-backend","timestamp":"2026-06-13 21:51:00"}
+{"level":"info","message":"Cron Jobs initialized successfully.","service":"erp-backend","timestamp":"2026-06-13 21:51:00"}
+{"level":"info","message":"POST /api/v1/auth/login","service":"erp-backend","timestamp":"2026-06-13 21:51:13"}
+{"level":"info","message":"GET /api/dashboard/stats","service":"erp-backend","timestamp":"2026-06-13 21:51:16"}
+{"level":"error","message":"500 - column ep.working_mode does not exist - /api/dashboard/stats - GET - ::1","service":"erp-backend","timestamp":"2026-06-13 21:51:18"}
+{"level":"error","message":"error: column ep.working_mode does not exist\n    at C:\\Users\\91883\\OneDrive\\Desktop\\coding\\employee_system\\backend\\node_modules\\pg-pool\\index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async DashboardService.getStats (C:\\Users\\91883\\OneDrive\\Desktop\\coding\\employee_system\\backend\\src\\services\\dashboardService.js:26:24)\n    at async getStats (C:\\Users\\91883\\OneDrive\\Desktop\\coding\\employee_system\\backend\\src\\controllers\\dashboardController.js:6:21)","service":"erp-backend","timestamp":"2026-06-13 21:51:18"}
+{"level":"info","message":"ERP Backend server is running on http://localhost:5001","service":"erp-backend","timestamp":"2026-06-13 21:51:28"}
+{"level":"info","message":"Cron Jobs initialized successfully.","service":"erp-backend","timestamp":"2026-06-13 21:51:28"}
+{"level":"info","message":"ERP Backend server is running on http://localhost:5001","service":"erp-backend","timestamp":"2026-06-13 21:51:45"}
+{"level":"info","message":"Cron Jobs initialized successfully.","service":"erp-backend","timestamp":"2026-06-13 21:51:45"}
+{"level":"info","message":"POST /api/v1/auth/login","service":"erp-backend","timestamp":"2026-06-13 21:52:04"}
+{"level":"info","message":"GET /api/dashboard/stats","service":"erp-backend","timestamp":"2026-06-13 21:52:06"}
+{"level":"info","message":"ERP Backend server is running on http://localhost:5001","service":"erp-backend","timestamp":"2026-06-13 21:52:17"}
+{"level":"info","message":"Cron Jobs initialized successfully.","service":"erp-backend","timestamp":"2026-06-13 21:52:18"}
+{"level":"info","message":"ERP Backend server is running on http://localhost:5001","service":"erp-backend","timestamp":"2026-06-13 21:53:50"}
+{"level":"info","message":"Cron Jobs initialized successfully.","service":"erp-backend","timestamp":"2026-06-13 21:53:50"}
+{"level":"info","message":"GET /api/employees","service":"erp-backend","timestamp":"2026-06-13 21:55:00"}
+{"level":"info","message":"GET /api/dashboard/stats","service":"erp-backend","timestamp":"2026-06-13 21:55:00"}
+{"level":"info","message":"GET /api/leaves","service":"erp-backend","timestamp":"2026-06-13 21:55:00"}
+{"level":"info","message":"GET /api/notifications","service":"erp-backend","timestamp":"2026-06-13 21:55:00"}
+{"level":"info","message":"GET /api/notifications","service":"erp-backend","timestamp":"2026-06-13 21:55:00"}
+{"level":"info","message":"GET /api/leaves","service":"erp-backend","timestamp":"2026-06-13 21:55:00"}
+{"level":"info","message":"GET /api/employees","service":"erp-backend","timestamp":"2026-06-13 21:55:00"}
+{"level":"info","message":"GET /api/dashboard/stats","service":"erp-backend","timestamp":"2026-06-13 21:55:00"}
+{"level":"info","message":"GET /api/notifications","service":"erp-backend","timestamp":"2026-06-13 21:55:15"}
+{"level":"info","message":"GET /api/notifications","service":"erp-backend","timestamp":"2026-06-13 21:55:30"}
+{"level":"info","message":"GET /api/leaves","service":"erp-backend","timestamp":"2026-06-13 21:55:37"}
+{"level":"info","message":"GET /api/employees","service":"erp-backend","timestamp":"2026-06-13 21:55:37"}
+{"level":"info","message":"GET /api/dashboard/stats","service":"erp-backend","timestamp":"2026-06-13 21:55:37"}
+{"level":"info","message":"GET /api/notifications","service":"erp-backend","timestamp":"2026-06-13 21:55:37"}
+{"level":"info","message":"GET /api/leaves","service":"erp-backend","timestamp":"2026-06-13 21:55:37"}
+{"level":"info","message":"GET /api/notifications","service":"erp-backend","timestamp":"2026-06-13 21:55:37"}
+{"level":"info","message":"GET /api/employees","service":"erp-backend","timestamp":"2026-06-13 21:55:37"}
+{"level":"info","message":"GET /api/dashboard/stats","service":"erp-backend","timestamp":"2026-06-13 21:55:37"}
+{"level":"info","message":"ERP Backend server is running on http://localhost:5001","service":"erp-backend","timestamp":"2026-06-13 21:56:37"}
+{"level":"info","message":"Cron Jobs initialized successfully.","service":"erp-backend","timestamp":"2026-06-13 21:56:37"}
+{"level":"info","message":"ERP Backend server is running on http://localhost:5001","service":"erp-backend","timestamp":"2026-06-13 21:58:11"}
+{"level":"info","message":"Cron Jobs initialized successfully.","service":"erp-backend","timestamp":"2026-06-13 21:58:11"}
+{"level":"info","message":"POST /api/v1/auth/login","service":"erp-backend","timestamp":"2026-06-13 22:06:08"}
+{"level":"info","message":"GET /api/dashboard/stats","service":"erp-backend","timestamp":"2026-06-13 22:06:11"}
+{"level":"info","message":"GET /api/employees","service":"erp-backend","timestamp":"2026-06-13 22:06:11"}
+{"level":"info","message":"GET /api/leaves","service":"erp-backend","timestamp":"2026-06-13 22:06:11"}
+{"level":"info","message":"GET /api/notifications","service":"erp-backend","timestamp":"2026-06-13 22:06:11"}
+{"level":"info","message":"GET /api/dashboard/stats","service":"erp-backend","timestamp":"2026-06-13 22:06:11"}
+{"level":"info","message":"GET /api/employees","service":"erp-backend","timestamp":"2026-06-13 22:06:11"}
+{"level":"info","message":"GET /api/leaves","service":"erp-backend","timestamp":"2026-06-13 22:06:11"}
+{"level":"info","message":"GET /api/notifications","service":"erp-backend","timestamp":"2026-06-13 22:06:11"}
+{"level":"info","message":"GET /api/notifications","service":"erp-backend","timestamp":"2026-06-13 22:06:26"}
+{"level":"info","message":"GET /api/notifications","service":"erp-backend","timestamp":"2026-06-13 22:06:41"}
+{"level":"info","message":"GET /api/notifications","service":"erp-backend","timestamp":"2026-06-13 22:06:56"}
+{"level":"info","message":"GET /api/notifications","service":"erp-backend","timestamp":"2026-06-13 22:07:11"}
+{"level":"info","message":"GET /api/notifications","service":"erp-backend","timestamp":"2026-06-13 22:07:26"}
+{"level":"info","message":"GET /api/notifications","service":"erp-backend","timestamp":"2026-06-13 22:07:41"}

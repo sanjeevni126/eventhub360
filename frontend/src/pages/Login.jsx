@@ -22,7 +22,7 @@ function Login() {
     setError('');
 
     try {
-      const response = await fetch('https://employee-management-api-lf6s.onrender.com/api/v1/auth/login', {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/v1/auth/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password, role: role.toLowerCase() })
@@ -33,7 +33,7 @@ function Login() {
       if (response.ok) {
         localStorage.setItem('token', data.token);
         localStorage.setItem('user', JSON.stringify(data.user));
-        window.location.href = '/dashboard';
+        navigate('/dashboard', { replace: true });
       } else {
         setError(data.error || 'Login failed');
       }
@@ -53,7 +53,7 @@ function Login() {
     setForgotLoading(true);
 
     try {
-      const response = await fetch('https://employee-management-api-lf6s.onrender.com/api/auth/forgot-password', {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/auth/forgot-password`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: forgotEmail })
