@@ -10,7 +10,7 @@ function Notifications() {
 
   const fetchNotifications = async () => {
     try {
-      const response = await fetch('http://localhost:5001/api/notifications', {
+      const response = await fetch('https://employee-management-api-lf6s.onrender.com/api/notifications', {
         headers: { 'Authorization': `Bearer ${token}` }
       });
       if (response.ok) {

@@ -12,7 +12,7 @@ const Attendance = () => {
 
   const fetchAttendance = async () => {
     try {
-      const response = await fetch('http://localhost:5001/api/attendance', {
+      const response = await fetch('https://employee-management-api-lf6s.onrender.com/api/attendance', {
         headers: { 'Authorization': `Bearer ${token}` }
       });
       if (response.ok) {
@@ -26,7 +26,7 @@ const Attendance = () => {
 
   const fetchTodayStatus = async () => {
     try {
-      const response = await fetch('http://localhost:5001/api/attendance/today', {
+      const response = await fetch('https://employee-management-api-lf6s.onrender.com/api/attendance/today', {
         headers: { 'Authorization': `Bearer ${token}` }
       });
       if (response.ok) {
@@ -46,7 +46,7 @@ const Attendance = () => {
   const handleCheckIn = async () => {
     setLoading(true);
     try {
-      const response = await fetch('http://localhost:5001/api/attendance/check-in', {
+      const response = await fetch('https://employee-management-api-lf6s.onrender.com/api/attendance/check-in', {
         method: 'POST',
         headers: { 'Authorization': `Bearer ${token}` }
       });
@@ -65,7 +65,7 @@ const Attendance = () => {
   const handleCheckOut = async () => {
     setLoading(true);
     try {
-      const response = await fetch('http://localhost:5001/api/attendance/check-out', {
+      const response = await fetch('https://employee-management-api-lf6s.onrender.com/api/attendance/check-out', {
         method: 'POST',
         headers: { 'Authorization': `Bearer ${token}` }
       });

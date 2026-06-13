@@ -28,7 +28,7 @@ const SidebarLayout = ({ children, title }) => {
   const fetchNotifications = async () => {
     if (!token) return;
     try {
-      const response = await fetch('http://localhost:5001/api/notifications', {
+      const response = await fetch('https://employee-management-api-lf6s.onrender.com/api/notifications', {
         headers: { 'Authorization': `Bearer ${token}` }
       });
       if (response.ok) {
@@ -100,7 +100,7 @@ const SidebarLayout = ({ children, title }) => {
     if (notif.user_id !== null) {
       // User specific notification
       try {
-        const response = await fetch(`http://localhost:5001/api/notifications/${notif.id}/read`, {
+        const response = await fetch(`https://employee-management-api-lf6s.onrender.com/api/notifications/${notif.id}/read`, {
           method: 'PUT',
           headers: { 'Authorization': `Bearer ${token}` }
         });
@@ -135,7 +135,7 @@ const SidebarLayout = ({ children, title }) => {
     // Mark user-specific read on backend
     for (const notif of userSpecificUnread) {
       try {
-        await fetch(`http://localhost:5001/api/notifications/${notif.id}/read`, {
+        await fetch(`https://employee-management-api-lf6s.onrender.com/api/notifications/${notif.id}/read`, {
           method: 'PUT',
           headers: { 'Authorization': `Bearer ${token}` }
         });

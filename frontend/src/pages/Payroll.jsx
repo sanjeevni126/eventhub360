@@ -21,7 +21,7 @@ function Payroll() {
 
   const fetchDepartments = async () => {
     try {
-      const response = await fetch('http://localhost:5001/api/departments', {
+      const response = await fetch('https://employee-management-api-lf6s.onrender.com/api/departments', {
         headers: { 'Authorization': `Bearer ${token}` }
       });
       if (response.ok) setDepartments(await response.json());
@@ -39,7 +39,7 @@ function Payroll() {
       if (workingMode) queryParams.append('workingMode', workingMode);
 
 
-      const response = await fetch(`http://localhost:5001/api/payroll?${queryParams.toString()}`, {
+      const response = await fetch(`https://employee-management-api-lf6s.onrender.com/api/payroll?${queryParams.toString()}`, {
         headers: { 'Authorization': `Bearer ${token}` }
       });
       if (response.ok) {

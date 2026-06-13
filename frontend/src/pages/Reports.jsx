@@ -17,7 +17,7 @@ function Reports() {
     if (tab === 'Asset Report') endpoint = 'assets';
 
     try {
-      const response = await fetch(`http://localhost:5001/api/reports/${endpoint}`, {
+      const response = await fetch(`https://employee-management-api-lf6s.onrender.com/api/reports/${endpoint}`, {
         headers: { 'Authorization': `Bearer ${token}` }
       });
       if (response.ok) {

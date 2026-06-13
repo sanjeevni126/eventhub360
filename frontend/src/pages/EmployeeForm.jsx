@@ -46,7 +46,7 @@ function EmployeeForm() {
       profile_image_url: profileImage
     };
 
-    const url = isEditing ? `http://localhost:5001/api/employees/${id}` : 'http://localhost:5001/api/employees';
+    const url = isEditing ? `https://employee-management-api-lf6s.onrender.com/api/employees/${id}` : 'https://employee-management-api-lf6s.onrender.com/api/employees';
     const method = isEditing ? 'PUT' : 'POST';
 
     try {

@@ -16,7 +16,7 @@ function DepartmentsList() {
 
   const fetchDepartments = async () => {
     try {
-      const response = await fetch('http://localhost:5001/api/departments', {
+      const response = await fetch('https://employee-management-api-lf6s.onrender.com/api/departments', {
         headers: { 'Authorization': `Bearer ${token}` }
       });
       if (response.ok) {
@@ -29,7 +29,7 @@ function DepartmentsList() {
   const handleAddDepartment = async () => {
     if (!newDepartmentName.trim()) return alert('Name is required');
     try {
-      const response = await fetch('http://localhost:5001/api/departments', {
+      const response = await fetch('https://employee-management-api-lf6s.onrender.com/api/departments', {
         method: 'POST',
         headers: { 
           'Authorization': `Bearer ${token}`,
@@ -50,7 +50,7 @@ function DepartmentsList() {
   const handleDelete = async (id) => {
     if (!window.confirm('Are you sure you want to delete this department? Employees assigned to it will have their department cleared.')) return;
     try {
-      const response = await fetch(`http://localhost:5001/api/departments/${id}`, {
+      const response = await fetch(`https://employee-management-api-lf6s.onrender.com/api/departments/${id}`, {
         method: 'DELETE',
         headers: { 'Authorization': `Bearer ${token}` }
       });

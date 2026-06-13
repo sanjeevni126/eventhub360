@@ -31,21 +31,21 @@ function EmployeeList() {
 
   const fetchEmployees = async () => {
     try {
-      const response = await fetch('http://localhost:5001/api/employees', { headers: { 'Authorization': `Bearer ${token}` } });
+      const response = await fetch('https://employee-management-api-lf6s.onrender.com/api/employees', { headers: { 'Authorization': `Bearer ${token}` } });
       if (response.ok) setEmployees(await response.json());
     } catch (err) {}
   };
 
   const fetchDepartments = async () => {
     try {
-      const response = await fetch('http://localhost:5001/api/departments', { headers: { 'Authorization': `Bearer ${token}` } });
+      const response = await fetch('https://employee-management-api-lf6s.onrender.com/api/departments', { headers: { 'Authorization': `Bearer ${token}` } });
       if (response.ok) setDepartments(await response.json());
     } catch (err) {}
   };
 
   const fetchSkills = async () => {
     try {
-      const response = await fetch('http://localhost:5001/api/skills', { headers: { 'Authorization': `Bearer ${token}` } });
+      const response = await fetch('https://employee-management-api-lf6s.onrender.com/api/skills', { headers: { 'Authorization': `Bearer ${token}` } });
       if (response.ok) setAllSkills(await response.json());
     } catch (err) {}
   };
@@ -53,7 +53,7 @@ function EmployeeList() {
   const handleDelete = async (id) => {
     if (!window.confirm('Are you sure you want to delete this employee?')) return;
     try {
-      const response = await fetch(`http://localhost:5001/api/employees/${id}`, {
+      const response = await fetch(`https://employee-management-api-lf6s.onrender.com/api/employees/${id}`, {
         method: 'DELETE',
         headers: { 'Authorization': `Bearer ${token}` }
       });
@@ -63,7 +63,7 @@ function EmployeeList() {
 
   const openEditModal = async (empId) => {
     try {
-      const response = await fetch(`http://localhost:5001/api/employees/${empId}`, { headers: { 'Authorization': `Bearer ${token}` } });
+      const response = await fetch(`https://employee-management-api-lf6s.onrender.com/api/employees/${empId}`, { headers: { 'Authorization': `Bearer ${token}` } });
       if (response.ok) {
         const data = await response.json();
         setEditData(data);
@@ -74,7 +74,7 @@ function EmployeeList() {
 
   const handleModalSave = async () => {
     try {
-      const response = await fetch(`http://localhost:5001/api/employees/${editData.id}`, {
+      const response = await fetch(`https://employee-management-api-lf6s.onrender.com/api/employees/${editData.id}`, {
         method: 'PUT',
         headers: { 'Authorization': `Bearer ${token}`, 'Content-Type': 'application/json' },
         body: JSON.stringify(editData)

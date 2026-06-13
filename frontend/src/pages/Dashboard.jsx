@@ -35,7 +35,7 @@ function Dashboard() {
 
   const fetchStats = async () => {
     try {
-      const res = await fetch('http://localhost:5001/api/dashboard/stats', { headers: { 'Authorization': `Bearer ${token}` } });
+      const res = await fetch('https://employee-management-api-lf6s.onrender.com/api/dashboard/stats', { headers: { 'Authorization': `Bearer ${token}` } });
       if (res.ok) {
         const data = await res.json();
         setStats(data);
@@ -45,7 +45,7 @@ function Dashboard() {
 
   const fetchEmployees = async () => {
     try {
-      const res = await fetch('http://localhost:5001/api/employees', { headers: { 'Authorization': `Bearer ${token}` } });
+      const res = await fetch('https://employee-management-api-lf6s.onrender.com/api/employees', { headers: { 'Authorization': `Bearer ${token}` } });
       if (res.ok) {
         const data = await res.json();
         setEmployees(data.slice(0, 5));
@@ -55,7 +55,7 @@ function Dashboard() {
 
   const fetchLeaves = async () => {
     try {
-      const res = await fetch('http://localhost:5001/api/leaves', { headers: { 'Authorization': `Bearer ${token}` } });
+      const res = await fetch('https://employee-management-api-lf6s.onrender.com/api/leaves', { headers: { 'Authorization': `Bearer ${token}` } });
       if (res.ok) {
         const data = await res.json();
         setAllLeaves(data);
