@@ -22,7 +22,7 @@ function Login() {
     setError('');
 
     try {
-      const response = await fetch('https://employee-management-api-lf6s.onrender.com/api/auth/login', {
+      const response = await fetch('https://employee-management-api-lf6s.onrender.com/api/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password, role: role.toLowerCase() })
