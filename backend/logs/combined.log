@@ -2887,3 +2887,5 @@
 {"level":"info","message":"GET /","service":"erp-backend","timestamp":"2026-06-13 14:30:13"}
 {"level":"info","message":"ERP Backend server is running on https://employee-management-api-lf6s.onrender.com","service":"erp-backend","timestamp":"2026-06-13 14:32:32"}
 {"level":"info","message":"Cron Jobs initialized successfully.","service":"erp-backend","timestamp":"2026-06-13 14:32:32"}
+{"level":"info","message":"ERP Backend server is running on http://localhost:5001","service":"erp-backend","timestamp":"2026-06-13 17:43:50"}
+{"level":"info","message":"Cron Jobs initialized successfully.","service":"erp-backend","timestamp":"2026-06-13 17:43:50"}
