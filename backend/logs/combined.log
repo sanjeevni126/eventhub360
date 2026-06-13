@@ -3009,3 +3009,5 @@
 {"level":"info","message":"GET /api/notifications","service":"erp-backend","timestamp":"2026-06-13 22:07:11"}
 {"level":"info","message":"GET /api/notifications","service":"erp-backend","timestamp":"2026-06-13 22:07:26"}
 {"level":"info","message":"GET /api/notifications","service":"erp-backend","timestamp":"2026-06-13 22:07:41"}
+{"level":"info","message":"ERP Backend server is running on http://localhost:5001","service":"erp-backend","timestamp":"2026-06-13 22:08:26"}
+{"level":"info","message":"Cron Jobs initialized successfully.","service":"erp-backend","timestamp":"2026-06-13 22:08:26"}
