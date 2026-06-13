@@ -26,7 +26,7 @@ function Signup() {
     setError('');
 
     try {
-      const response = await fetch('https://employee-management-api-lf6s.onrender.com/api/auth/signup', {
+      const response = await fetch('https://employee-management-api-lf6s.onrender.com/api/v1/auth/signup', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ name, email, password, role: role.toLowerCase(), designation })
