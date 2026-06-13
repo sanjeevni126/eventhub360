@@ -25,7 +25,7 @@ function Login() {
       const response = await fetch('https://employee-management-api-lf6s.onrender.com/api/v1/auth/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, password, role: role.toLowerCase() })
+        body: JSON.stringify({ email, password })
       });
 
       const data = await response.json();
